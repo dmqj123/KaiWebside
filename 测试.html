@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>居中的下载按钮</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center; /* 水平居中 */
+            align-items: center; /* 垂直居中 */
+            height: 100vh; /* 使body高度充满整个视口 */
+            margin: 0; /* 移除默认的外边距 */
+        }
+
+        .container {
+            text-align: center; /* 使容器内的内容水平居中 */
+        }
+
+        .download-button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            text-decoration: none;
+            background-color: #4CAF50; /* 绿色背景 */
+            color: white; /* 白色文字 */
+            border-radius: 5px; /* 圆角边框 */
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease; /* 平滑过渡效果 */
+        }
+
+        .download-button:hover {
+            background-color: #45a049; /* 悬停时的背景颜色 */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="path/to/your/file.pdf" download="filename.pdf" class="download-button">
+            下载文件
+        </a>
+    </div>
+</body>
+</html>
