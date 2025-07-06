@@ -1,211 +1,276 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KAI</title>
-    <style>
-        body {
-            background-color: blue;
-            margin: 0;
-
-        }
-
-        header {
-            background-color: white;
-            color: white;
-            padding: 10px;
-        }
-
-        #Promotion {
-            border: 2px solid black;
-            display: inline-block;
-            margin: 20px 0 20px 20px;
-            color: white;
-        }
-
-        .jump-bilibili {
-            display: inline;
-            padding: 10px 20px;
-            margin: 5px;
-            text-decoration: none;
-            color: #000;
-            font-size: 10px;
-            border: 1px solid #000;
-            transition: font-size 0.3s;
-            float: right;
-            transform: translateY(-50px);
-            
-
-        }
-
-        /* 鼠标悬浮时的样式 */
-        .jump-bilibili:hover {
-            font-size: 15px;
-            /* 放大字体 */
-        }
-
-        .download-button {
-            display: inline-block;
-            padding: 10px 20px;
-            font-size: 16px;
-            font-weight: bold;
-            text-align: center;
-            text-decoration: none;
-            background-color: #4CAF50;
-            /* 绿色背景 */
-            color: white;
-            /* 白色文字 */
-            border-radius: 5px;
-            /* 圆角边框 */
-            border: none;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-            /* 平滑过渡效果 */
-        }
-
-        .download-button:hover {
-            background-color: #45a049;
-            /* 悬停时的背景颜色 */
-        }
-
-        #downloads-section h3 {
-            display: inline-block;
-        }
-
-        #downloads-section {
-            border: 2px solid black;
-            margin: 10px 400px 10px 50px;
-        }
-
-        #downloads-section a {
-            float: right;
-            margin-right: 400px;
-        }
-
-        .boast {
-            border: #000000 2px solid;
-            text-align: center;
-            margin: 10px 100px 10px 100px;
-        }
-
-        .boast img {
-            border: none;
-        }
-    </style>
+    <title>SRT Studio - 星律科技工作室</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="main.css">
 </head>
-
 <body>
+    <!-- 星空背景 -->
+    <div class="stars-bg" id="stars"></div>
+    
     <header>
-        <h1 style="font-weight: bold;color: black; margin: 0;display: inline-block;">KAI Studios(不朽之龙)</h1>
-        <p style="font-weight: bold;color: black; margin: 0;float:right;">QQ官方交流群:599679151</p>
+        <div class="header-container">
+            <div class="logo-text">SRT Studio</div>
+            <nav>
+                <ul>
+                    <li><a href="/index.html" class="nav-link active">主页</a></li>
+                    <li><a href="/download/index.html" class="nav-link">下载</a></li>
+                    <li><a href="/sector/index.html" class="nav-link">分支部门</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
-    <div>
-        <h1 id='Promotion'>软件/产品/启动器</h1>
-        <h2 style="color: white;display: inline-block;">多种产品事你进群获取</h2>
-        <h2 style="text-align: center;">2024年</h2>
-        <h3 style="display: inline-block;margin:10px 0 0 20vw;">我们研发出:</h3>
-        <pre style="text-align: center;margin: 0 auto;font-size: 30px;font-weight: bold;">
-《蓝屏小助手》1.0至2.2版本
-辅助件工具《进程创建器》1.0至1.2版本
-游戏启动器《Minecraft快速启动器》1.0至1.8版本
-防护器《注像防护器》(虽然只防用户油表)
-恶搞很疗对香乐》等</pre>
-        <h2 style="text-align: center;">2025年</h2>
-        <h3 style="text-align: center;margin: 0 auto;max-width: 50ch;word-break: break-all;font-size: 30px;">
-            我们用Mind+做出仿容歌游戏《小恐龙》并对此施戏作出改变，并
-            用作比赛作品参赛，而且作出了《小恐龙》触控版。
-        </h3>
-        <br>
-        <h3 style="text-align: center;margin: 0 auto;max-width: 50ch;word-break: break-all;font-size: 30px;">
-            2025,还有巨作正在开发，让我们一起将手共进;2025,重塑白我,创造
-            无限可能;两个UP主让你体验飞一般的人生感受!
-        </h3>
-        <a href="#" class="jump-bilibili">第二个</a>
-        <a href="https://space.bilibili.com/505767810?spm_id_from=333.337.0.0" class="jump-bilibili">第一个</a>
-        <div style="font-size: 0;white-space: nowrap; text-align: center;">
-            <img style=" height: 200px;width: 300px;margin-top: 10px;margin-left: 20px;vertical-align: middle; " src="img/1.png"
-                alt="">
-            <img style=" height: 200px;width: 300px;margin-top: 10px;margin-left: 20px;vertical-align: middle; " src="img/2.png"
-                alt="">
-            <div style="display: inline-block;vertical-align: middle">
-                <h2 style="font-size: 32px;margin: 0;">KAI Studios</h2>
-                <h2 style="font-size: 32px;margin: 0;">(不朽之龙工作室)</h2>
-                <h2 style="font-size: 32px;margin: 0;">官方认证UP主!</h2>
-            </div>
+    
+    <!-- 主页内容 -->
+    <section id="home" class="page active">
+        <div class="hero">
+            <h1>星律科技工作室</h1>
+            <p>致力打造一个<span class="highlight">科技与游戏为一体</span>的创新工作室，用科技看向未来</p>
+            <button class="btn" onclick="alert('请加入QQ群：599679151')">加入工作室</button>
         </div>
-        <div>
-            <h2 style="margin-left: 20px;">部分产品下载栏(更多产品请加入官方交流群获取):</h2>
-            <div id="downloads-section">
-                <div>
-                    <h3>《Minecraft快速启动器》</h3>
-                    <a href="https://wwkd.lanzn.com/iCMne2p6f7ij" class="download-button">下载文件</a>
-                    <p>(要有.minecraft游戏文件夹才能正常运行.1.2~1.21.4五个版本)</p>
+        
+        <h2 class="section-title">2024年开发产品</h2>
+        <div class="products-grid">
+            <div class="product-card">
+                <div class="card-header">
+                    <h3>Minecraft快速启动器</h3>
+                    <span class="tech-tag">C++</span>
                 </div>
-                <div>
-                    <h3>《蓝屏小助手》</h3>
-                    <a href="https://wwkd.lanzn.com/ivavm2p6fbdi" class="download-button">下载文件</a>
-                    <p>(内含多个版本，请自主选择，并且不会实质性对电脑造成破坏)</p>
-                </div>
-                <div>
-                    <h3>《进程创建器》</h3>
-                    <a href="#" class="download-button">下载文件</a>
-                    <p>(内含多个版本)</p>
-                </div>
-                <div>
-                    <h3>《大香蕉》</h3>
-                    <a href="#" class="download-button">下载文件</a>
-                    <p>不会破坏电脑,经火绒检测无害,重启后可恢复正常</p>
+                <div class="card-body">
+                    <p>至今仍在更新，最新版本为1.9</p>
+                    <div class="status active">
+                        <span class="status-dot"></span> 更新中
+                    </div>
                 </div>
             </div>
+            
+            <div class="product-card">
+                <div class="card-header">
+                    <h3>蓝屏小助手</h3>
+                    <span class="tech-tag">C++</span>
+                </div>
+                <div class="card-body">
+                    <p>现已停止更新，最新版本为2.2</p>
+                    <div class="status inactive">
+                        <span class="status-dot"></span> 已停止更新
+                    </div>
+                </div>
+            </div>
+            
+            <div class="product-card">
+                <div class="card-header">
+                    <h3>极域没坤巴</h3>
+                    <span class="tech-tag">C++</span>
+                </div>
+                <div class="card-body">
+                    <p>至今仍在用，最新版本为1.3</p>
+                    <div class="status maintained">
+                        <span class="status-dot"></span> 维护中
+                    </div>
+                </div>
+            </div>
+            
+            <div class="product-card">
+                <div class="card-header">
+                    <h3>注册表防护器</h3>
+                    <span class="tech-tag">C++</span>
+                </div>
+                <div class="card-body">
+                    <p>现已停止更新但仍在维护（仅防护用户注册表）</p>
+                    <div class="status maintained">
+                        <span class="status-dot"></span> 维护中
+                    </div>
+                </div>
+            </div>
+            
+            <div class="product-card">
+                <div class="card-header">
+                    <h3>小恐龙</h3>
+                    <span class="tech-tag">Mind+</span>
+                </div>
+                <div class="card-body">
+                    <p>工作室参赛作品，市级类（暂无版本）</p>
+                </div>
+            </div>
         </div>
-        <div style="text-align: center;">
-            <h1 style="text-align: center; display: inline-block; transform: translateY(-100px);">更多内容</h1>
-            <img width="200" height="200" src="#" alt="">
-            <h1 style="text-align: center;display: inline-block;transform: translateY(-100px);">等你加入</h1>
+        
+        <h2 class="section-title">2025年新项目</h2>
+        <div class="products-grid">
+            <div class="product-card">
+                <div class="card-header">
+                    <h3>LCL I</h3>
+                    <span class="tech-tag">Godot</span>
+                </div>
+                <div class="card-body">
+                    <p>现在处于开发状态，(可能是)新一代Minecraft启动器！</p>
+                </div>
+            </div>
+            
+            <div class="product-card">
+                <div class="card-header">
+                    <h3>Windows Mhyecy OS 10</h3>
+                </div>
+                <div class="card-body">
+                    <p>测试Beta版已推出，加入Q群后反馈问题哦！</p>
+                </div>
+            </div>
+            
+            <div class="product-card">
+                <div class="card-header">
+                    <h3>SRT闹钟1.0</h3>
+                    <span class="tech-tag">Mind+</span>
+                </div>
+                <div class="card-body">
+                    <p>处于编写状态，很快就能"出炉了"！</p>
+                </div>
+            </div>
+            
+            <div class="product-card">
+                <div class="card-header">
+                    <h3>Windows Mcdzsystem OS 11</h3>
+                </div>
+                <div class="card-body">
+                    <p>正在紧密地工作中，预计7月末就出正式版！</p>
+                </div>
+            </div>
         </div>
-        <div class="boast">
-            <div style="display: inline-block; margin:10px 30px 10px 30px;"><img width="100px" height="100px" src="img/3.png"
-                    alt="">
-                <h1>强大团队</h1>
+
+        <h2 class="section-title">我们会的编程语言</h2>
+        <div class="tech-grid" style="grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));">
+            <div class="tech-item">
+                <div class="tech-icon"><i class="fas fa-code"></i></div>
+                <div>C++</div>
             </div>
-            <div style="display: inline-block; margin:10px 30px 10px 30px;"><img width="100px" height="100px" src="#"
-                    alt="">
-                <h1>多种产品</h1>
+            <div class="tech-item">
+                <div class="tech-icon"><i class="fab fa-python"></i></div>
+                <div>Python</div>
             </div>
-            <div style="display: inline-block; margin:10px 30px 10px 30px;"><img width="100px" height="100px" src="#"
-                    alt="">
-                <h1>多种语言</h1>
+            <div class="tech-item">
+                <div class="tech-icon"><i class="fas fa-gamepad"></i></div>
+                <div>Godot</div>
             </div>
-            <div style="display: inline-block; margin:10px 30px 10px 30px;"><img width="100px" height="100px" src="#"
-                    alt="">
-                <h1>更多发现</h1>
+            <div class="tech-item">
+                <div class="tech-icon"><i class="fab fa-java"></i></div>
+                <div>Java</div>
+            </div>
+            <div class="tech-item">
+                <div class="tech-icon"><i class="fab fa-microsoft"></i></div>
+                <div>C#</div>
+            </div>
+            <div class="tech-item">
+                <div class="tech-icon"><i class="fas fa-code"></i></div>
+                <div>易语言</div>
             </div>
         </div>
-    </div>
-    <h1 style="float: left;">期待你的加入</h1>
-    <h1 style="float: right;">©Copyright 2024-2025 KAI Studios</h1>
+
+        <h2 class="section-title">工作室目前情况</h2>
+        
+        <div class="studio-stats">
+            <div class="stat-card">
+                <div class="stat-value">9名</div>
+                <p>工作室成员</p>
+                <p class="note">有意愿者可加Q群申请加入工作室</p>
+            </div>
+            
+            <div class="stat-card">
+                <div class="stat-value">5+</div>
+                <p>技术支持人员</p>
+                <div class="tech-grid">
+                    <div class="tech-item" onclick="window.location.href='https://space.bilibili.com/505767810'">
+                        <div class="tech-icon"><i class="fab fa-windows"></i></div>
+                        <div>SYSTEM-SRT-CYH</div>
+                    </div>
+                    <div class="tech-item" onclick="window.location.href='https://space.bilibili.com/649846967'">
+                        <div class="tech-icon"><i class="fab fa-windows"></i></div>
+                        <div>Win7MEMZ-BX</div>
+                    </div>
+                    <div class="tech-item" onclick="window.location.href='https://space.bilibili.com/3494352290581232'">
+                        <div class="tech-icon"><i class="fas fa-cloud"></i></div>
+                        <div>云散皆星河</div>
+                    </div>
+                    <div class="tech-item" onclick="window.location.href='https://space.bilibili.com/1451186233'">
+                        <div class="tech-icon"><i class="fas fa-car"></i></div>
+                        <div>粘年云</div>
+                    </div>
+                    <div class="tech-item" onclick="window.location.href='https://space.bilibili.com/1786990005'">
+                        <div class="tech-icon"><i class="fas fa-microchip"></i></div>
+                        <div>代码奇迹</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <h2 class="section-title">二创系统</h2>
+        <div class="product-card" style="max-width: 800px; margin: 0 auto;">
+            <div class="card-body">
+                <p>二创系统基于Windows平台，大多数从Windows 10、11为主要图标，且对系统进行修改、美化和调整，再封装系统发到网上进行宣传。</p>
+            </div>
+        </div>
+    </section>
+    
+
+    
+    <footer>
+        <div class="footer-content">
+            <h3>关注我们</h3>
+            <div class="social-links">
+                <a href="https://space.bilibili.com/505767810" class="social-link"><i class="fab fa-bilibili"></i></a>
+            </div>
+            <p>更多内容请加入官方QQ群：599679151</p>
+            <p><em>失败的人生也是人生，他们有权利享受到最后！</em></p>
+            <div class="copyright">
+                Copyright 2024 – 2025 SRT Studio.
+            </div>
+        </div>
+    </footer>
+    
     <script>
-        // 获取所有按钮元素
-        const buttons = document.querySelectorAll('.jump-bilibili');
-
-        // 为每个按钮添加鼠标悬浮和离开的事件监听
-        buttons.forEach(button => {
-            button.addEventListener('mouseover', function () {
-                button.textContent = '跳转哔哩哔哩';
+        // 创建星空背景
+        function createStars() {
+            const starsContainer = document.getElementById('stars');
+            const starsCount = 150;
+            
+            for (let i = 0; i < starsCount; i++) {
+                const star = document.createElement('div');
+                star.classList.add('star');
+                
+                // 随机位置
+                const x = Math.floor(Math.random() * 100);
+                const y = Math.floor(Math.random() * 100);
+                star.style.left = `${x}%`;
+                star.style.top = `${y}%`;
+                
+                // 随机大小
+                const size = Math.random() * 3;
+                star.style.width = `${size}px`;
+                star.style.height = `${size}px`;
+                
+                // 随机闪烁时间和透明度
+                star.style.setProperty('--duration', `${Math.random() * 5 + 3}s`);
+                star.style.setProperty('--opacity', Math.random() * 0.8 + 0.2);
+                
+                starsContainer.appendChild(star);
+            }
+        }
+        
+        // 产品卡片悬停效果增强
+        document.querySelectorAll('.product-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.boxShadow = '0 15px 30px rgba(106, 17, 203, 0.6)';
             });
-
-            button.addEventListener('mouseout', function () {
-                // 恢复原始文本内容，假设原始文本内容保存在data-original-text属性中
-                button.textContent = button.getAttribute('data-original-text');
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.boxShadow = '0 10px 20px rgba(0, 0, 0, 0.3)';
             });
-
-            // 保存原始文本内容
-            button.setAttribute('data-original-text', button.textContent);
+        });
+        
+        // 初始化
+        window.addEventListener('DOMContentLoaded', () => {
+            createStars();
         });
     </script>
 </body>
-
-
 </html>
